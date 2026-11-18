@@ -1,0 +1,127 @@
+Varianti valutabili (>=100 trade IS, >=50 OOS): 17040.  Soglia Bonferroni |t| > 4.68
+Netto >0 in IS: 2.1%   Netto >0 in OOS: 6.0%   in entrambi: 0.5%
+Lordo >0 in IS: 64.1%   Lordo >0 in OOS: 59.7%
+Significative dopo correzione (t_IS > 4.68): 0   di cui positive anche OOS: 0
+Correlazione di rango IS->OOS dell'expectancy netta: 0.788
+Correlazione di rango IS->OOS dell'expectancy LORDA: 0.229
+
+TOP 25 varianti per t in IS e loro esito OOS:
+                                                    n_IS  mean_IS   t_IS  win_IS  gross_IS  n_OOS  mean_OOS  t_OOS  win_OOS  gross_OOS
+TF  KR  KV  ctx       entry    exit          sess                                                                                     
+M30 1.5 1.0 quiet     breakout TIME12        NY    141.0    0.415  2.217  42.553     0.569   89.0     0.172  0.833   38.202      0.237
+    2.0 1.5 don32     breakout TIME12        NY    134.0    0.285  1.772  42.537     0.396   91.0    -0.182 -1.262   30.769     -0.125
+    1.5 1.0 quiet     breakout TP3R          NY    141.0    0.225  1.696  43.972     0.378   89.0     0.125  0.791   39.326      0.189
+    2.0 1.5 don32     breakout TP2R          NY    134.0    0.174  1.684  47.015     0.285   91.0    -0.187 -1.591   32.967     -0.130
+        1.0 don32     breakout TIME12        NY    169.0    0.227  1.588  40.828     0.350  103.0    -0.078 -0.454   31.068     -0.020
+M15 2.0 2.0 ema       breakout TP1R          NY    128.0    0.128  1.576  59.375     0.226  136.0     0.076  0.928   58.824      0.139
+                               PARZ+BE+TRAIL NY    128.0    0.137  1.566  59.375     0.235  136.0     0.088  0.997   58.824      0.152
+M30 2.0 1.5 don32     breakout TP3R          NY    134.0    0.183  1.542  44.776     0.294   91.0    -0.144 -1.062   31.868     -0.086
+            don32+ema breakout TIME12        NY    114.0    0.262  1.468  39.474     0.376   81.0    -0.282 -2.283   29.630     -0.224
+    1.5 1.5 don32     breakout TIME12        NY    143.0    0.216  1.413  40.559     0.327  101.0    -0.169 -1.234   31.683     -0.111
+    2.0 1.0 don32+ema breakout TIME12        NY    140.0    0.224  1.385  38.571     0.348   89.0    -0.148 -0.845   30.337     -0.089
+    1.5 1.0 don32     breakout TIME12        NY    201.0    0.172  1.354  39.801     0.301  124.0    -0.126 -0.847   30.645     -0.067
+    2.0 1.5 don32     breakout PARZ+BE+TRAIL NY    134.0    0.119  1.352  52.985     0.230   91.0    -0.182 -1.781   39.560     -0.124
+M15 2.0 2.0 don32+ema breakout TP1R          NY    108.0    0.118  1.325  59.259     0.214  101.0     0.017  0.178   55.446      0.077
+                               PARZ+BE+TRAIL NY    108.0    0.127  1.320  59.259     0.222  101.0     0.010  0.099   55.446      0.070
+            ema       breakout TRAIL1R       NY    128.0    0.119  1.306  42.969     0.217  136.0     0.030  0.351   42.647      0.093
+    1.5 2.0 don32     breakout TP2R          NY    128.0    0.155  1.293  45.312     0.255  127.0    -0.079 -0.714   40.157     -0.019
+        1.0 quiet     breakout TIME12        NY    248.0    0.175  1.290  35.484     0.351  199.0    -0.016 -0.110   30.151      0.071
+        2.0 ema       breakout PARZ+BE+TRAIL NY    144.0    0.106  1.284  57.639     0.206  154.0     0.035  0.422   56.494      0.097
+M30 2.0 1.5 don32     breakout TIME12        ALL   271.0    0.160  1.281  36.531     0.298  181.0    -0.160 -1.036   27.072     -0.099
+M15 2.0 2.0 don32+ema breakout TIME12        NY    108.0    0.212  1.269  42.593     0.308  101.0    -0.007 -0.042   35.644      0.053
+M30 2.0 2.0 don32     breakout TIME12        ALL   115.0    0.198  1.258  41.739     0.296  123.0    -0.001 -0.006   29.268      0.056
+M15 3.0 2.0 don32     breakout TP1R          ALL   158.0    0.094  1.252  60.759     0.229  133.0     0.116  1.390   60.150      0.185
+M30 1.5 1.0 don32+ema breakout TIME12        NY    170.0    0.176  1.245  38.235     0.305  106.0    -0.192 -1.253   29.245     -0.132
+    2.0 1.5 don32+ema breakout TP2R          NY    114.0    0.136  1.239  44.737     0.249   81.0    -0.203 -1.635   32.099     -0.145
+
+TOP 15 per t in OOS (solo per vedere cosa sarebbe servito sapere prima) e il loro IS:
+                                                  n_IS  mean_IS   t_IS  win_IS  gross_IS  n_OOS  mean_OOS  t_OOS  win_OOS  gross_OOS
+TF  KR  KV  ctx   entry    exit          sess                                                                                       
+M15 3.0 2.0 ema   breakout PARZ+BE+TRAIL ALL     169.0    0.001  0.017  57.988     0.137  143.0     0.244  2.815   65.035      0.312
+        1.5 ema   breakout PARZ+BE+TRAIL ALL     353.0   -0.119 -2.162  54.391     0.078  181.0     0.195  2.583   64.088      0.273
+        2.0 ema   breakout TP1R          ALL     169.0    0.046  0.619  57.988     0.182  143.0     0.202  2.579   65.035      0.271
+        1.5 ema   breakout TP1R          ALL     353.0   -0.104 -1.982  54.108     0.093  181.0     0.178  2.538   64.088      0.255
+        1.0 ema   breakout PARZ+BE+TRAIL ALL     414.0   -0.134 -2.655  54.106     0.066  191.0     0.186  2.523   63.874      0.267
+            quiet breakout TP1R          ALL     181.0   -0.137 -1.847  53.039     0.076   99.0     0.230  2.485   66.667      0.315
+            ema   breakout TP1R          ALL     414.0   -0.110 -2.271  53.865     0.089  191.0     0.169  2.469   63.874      0.249
+    2.0 1.5 quiet pullback TP3R          Londra  242.0   -0.088 -0.757  28.512     0.149  143.0     0.392  2.445   38.462      0.487
+            ema   pullback TP3R          Londra  481.0   -0.124 -1.524  28.067     0.111  202.0     0.327  2.429   35.644      0.416
+    3.0 1.0 quiet breakout PARZ+BE+TRAIL ALL     181.0   -0.163 -2.198  53.039     0.050   99.0     0.251  2.408   66.667      0.336
+        2.0 ema   breakout TP2R          ALL     169.0   -0.120 -1.194  36.686     0.016  143.0     0.270  2.362   51.049      0.338
+    2.0 1.5 quiet pullback TIME12        Londra  242.0   -0.104 -0.779  31.405     0.133  143.0     0.391  2.340   44.056      0.485
+        2.0 ema   breakout PARZ+BE+TRAIL ALL     226.0    0.024  0.362  57.965     0.166  241.0     0.155  2.206   59.336      0.224
+    3.0 1.5 quiet breakout TP1R          ALL     145.0   -0.180 -2.185  50.345     0.026   92.0     0.208  2.137   65.217      0.290
+                           PARZ+BE+TRAIL ALL     145.0   -0.195 -2.340  50.345     0.011   92.0     0.228  2.080   65.217      0.310
+
+Mediana per TF:
+     mean_IS  mean_OOS  gross_IS  gross_OOS
+TF                                         
+M1    -0.839    -0.373     0.027      0.015
+M15   -0.208    -0.096     0.027      0.022
+M3    -0.476    -0.210     0.034      0.017
+M30   -0.137    -0.086     0.027     -0.001
+M5    -0.388    -0.157     0.027      0.024
+
+Mediana per entry:
+          mean_IS  mean_OOS  gross_IS  gross_OOS
+entry                                           
+breakout   -0.344    -0.153     0.071      0.030
+fade       -0.466    -0.230     0.041      0.007
+market     -0.492    -0.225     0.022      0.010
+pullback   -0.314    -0.116     0.001      0.029
+
+Mediana per exit:
+               mean_IS  mean_OOS  gross_IS  gross_OOS
+exit                                                 
+PARZ+BE+TRAIL   -0.391    -0.163     0.035      0.030
+TIME12          -0.412    -0.187     0.033      0.022
+TP1R            -0.442    -0.205    -0.018     -0.022
+TP2R            -0.408    -0.190     0.019      0.005
+TP3R            -0.410    -0.183     0.025      0.018
+TRAIL1R         -0.354    -0.149     0.072      0.052
+
+Mediana per ctx:
+           mean_IS  mean_OOS  gross_IS  gross_OOS
+ctx                                              
+don32       -0.382    -0.171     0.030      0.014
+don32+ema   -0.382    -0.164     0.034      0.018
+ema         -0.390    -0.175     0.028      0.019
+quiet       -0.463    -0.208     0.021      0.017
+
+Mediana per sess:
+        mean_IS  mean_OOS  gross_IS  gross_OOS
+sess                                          
+ALL      -0.354    -0.151     0.030      0.017
+Asia     -0.662    -0.246     0.024      0.030
+Londra   -0.429    -0.211     0.036      0.009
+NY       -0.221    -0.115     0.032      0.018
+Sera     -0.516    -0.255     0.007      0.004
+
+WALK-FORWARD: ogni anno scelgo le varianti migliori (t) sui 3 anni precedenti, le opero l'anno dopo alla cieca
+ anno  top  trade  R_medio  R_tot                                                                                  scelta
+ 2020    1     28    0.015    0.4          ('M30', np.float64(1.5), np.float64(1.0), 'quiet', 'breakout', 'TIME12', 'NY')
+ 2020    5    195    0.098    3.8          ('M30', np.float64(1.5), np.float64(1.0), 'quiet', 'breakout', 'TIME12', 'NY')
+ 2020   20    762    0.123    4.7          ('M30', np.float64(1.5), np.float64(1.0), 'quiet', 'breakout', 'TIME12', 'NY')
+ 2021    1     31   -0.206   -6.4        ('M30', np.float64(1.5), np.float64(1.0), 'don32+ema', 'breakout', 'TP3R', 'NY')
+ 2021    5    193   -0.119   -4.6        ('M30', np.float64(1.5), np.float64(1.0), 'don32+ema', 'breakout', 'TP3R', 'NY')
+ 2021   20    651   -0.083   -2.7        ('M30', np.float64(1.5), np.float64(1.0), 'don32+ema', 'breakout', 'TP3R', 'NY')
+ 2022    1     51   -0.210  -10.7              ('M15', np.float64(1.5), np.float64(2.0), 'ema', 'breakout', 'TP1R', 'NY')
+ 2022    5    258   -0.183   -9.4              ('M15', np.float64(1.5), np.float64(2.0), 'ema', 'breakout', 'TP1R', 'NY')
+ 2022   20    789   -0.160   -6.3              ('M15', np.float64(1.5), np.float64(2.0), 'ema', 'breakout', 'TP1R', 'NY')
+ 2023    1     45    0.275   12.4          ('M15', np.float64(1.5), np.float64(1.0), 'quiet', 'breakout', 'TIME12', 'NY')
+ 2023    5    307   -0.076   -4.6          ('M15', np.float64(1.5), np.float64(1.0), 'quiet', 'breakout', 'TIME12', 'NY')
+ 2023   20    994   -0.157   -7.8          ('M15', np.float64(1.5), np.float64(1.0), 'quiet', 'breakout', 'TIME12', 'NY')
+ 2024    1     17    0.333    5.7        ('M15', np.float64(3.0), np.float64(1.5), 'don32', 'pullback', 'TP3R', 'Londra')
+ 2024    5    103    0.173    3.6        ('M15', np.float64(3.0), np.float64(1.5), 'don32', 'pullback', 'TP3R', 'Londra')
+ 2024   20    681   -0.075   -2.6        ('M15', np.float64(3.0), np.float64(1.5), 'don32', 'pullback', 'TP3R', 'Londra')
+ 2025    1     16    0.129    2.1 ('M15', np.float64(2.0), np.float64(1.5), 'ema', 'breakout', 'PARZ+BE+TRAIL', 'Londra')
+ 2025    5    102    0.032    0.6 ('M15', np.float64(2.0), np.float64(1.5), 'ema', 'breakout', 'PARZ+BE+TRAIL', 'Londra')
+ 2025   20    471    0.003    0.1 ('M15', np.float64(2.0), np.float64(1.5), 'ema', 'breakout', 'PARZ+BE+TRAIL', 'Londra')
+ 2026    1     25    0.154    3.8    ('M15', np.float64(3.0), np.float64(2.0), 'ema', 'breakout', 'PARZ+BE+TRAIL', 'ALL')
+ 2026    5    118    0.098    2.3    ('M15', np.float64(3.0), np.float64(2.0), 'ema', 'breakout', 'PARZ+BE+TRAIL', 'ALL')
+ 2026   20    483    0.092    2.2    ('M15', np.float64(3.0), np.float64(2.0), 'ema', 'breakout', 'PARZ+BE+TRAIL', 'ALL')
+     anni_positivi  anni  R_medio_pesato
+top                                     
+1              5.0   7.0           0.034
+5              4.0   7.0          -0.033
+20             3.0   7.0          -0.051
