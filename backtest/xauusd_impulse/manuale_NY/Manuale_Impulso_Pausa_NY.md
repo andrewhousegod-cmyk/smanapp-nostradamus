@@ -3,6 +3,8 @@ title: "Strategia «Impulso → Pausa → Continuazione» – sessione di New Yo
 subtitle: "Manuale illustrato – v1 – 18/11/2026"
 ---
 
+> **⚠️ VERDETTO FINALE (18/11/2026): NON VALIDATA.** Ricerca su 1.728.000 combinazioni di parametri (timeframe da M1 a H1, tutte le variabili del pattern): nessuna supera la soglia statistica corretta. Il walk-forward del processo di scelta è negativo (da −0,01 a −0,06R per trade). Questa strategia è una combinazione che sembra buona sul passato. **Non usarla con capitale reale.** Dettagli in `results/sweep_eval.txt`.
+
 # Introduzione
 
 Questa strategia è **la tua idea di partenza**: dopo una lateralità, il mercato fa un primo movimento forte con volume, si ferma per poche candele e poi riparte nella stessa direzione.
