@@ -24,6 +24,9 @@ class P:
     BUF: float = 0.05    # USD beyond level for trigger / SL
     SLIP: float = 0.05   # USD slippage on stop fills (entry & SL)
     COMM: float = 5.40   # USD per lot round turn
+    DON: int = 0          # >0: impulse must CLOSE beyond prior DON-bar extreme (exit from lateral range)
+    ALIGN: bool = False   # impulse direction must agree with EMA200 side
+    USEQUIET: bool = True
     BASELINE: bool = False  # True: replace impulse filter with ordinary bars (null test)
 
 def make_tf(m1, tf):
@@ -44,9 +47,17 @@ def find_setups(b, p, rng_seed=0):
     mx = pd.Series(rng).shift(1).rolling(p.N).max().values
     with np.errstate(invalid="ignore", divide="ignore"):
         dirn = np.abs(body) / np.where(rng > 0, rng, np.nan)
-        quiet = mx < p.QUIET * ar
+        quiet = (mx < p.QUIET * ar) if p.USEQUIET else np.ones(len(b), bool)
         if not p.BASELINE:
             sig = (rng >= p.KR * ar) & (b.vol.values >= p.KV * av) & (dirn >= p.BODY) & quiet
+            c = b.close.values; up = body > 0
+            if p.DON:
+                dh = pd.Series(b.high.values).shift(1).rolling(p.DON).max().values
+                dl = pd.Series(b.low.values).shift(1).rolling(p.DON).min().values
+                sig &= np.where(up, c > dh, c < dl)
+            if p.ALIGN:
+                ema = b.close.ewm(span=200, adjust=False).mean().values
+                sig &= np.where(up, c > ema, c < ema)
         else:  # ordinary directional bars of normal size: does the impulse add information?
             sig = (rng < 1.2 * ar) & (rng > 0.6 * ar) & (dirn >= p.BODY)
             idx = np.flatnonzero(sig)
