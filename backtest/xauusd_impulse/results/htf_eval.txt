@@ -1,0 +1,153 @@
+Strategie totali: 518,400   valutabili (>=100 trade IS, >=50 OOS): 85,820   soglia di significatività corretta: t > 5.00
+Positive (netto) in IS: 50.0%  in OOS: 57.4%  in entrambi: 29.7%
+Correlazione di rango IS -> OOS: 0.030
+Strategie con t (intero periodo) oltre la soglia corretta: 0
+
+=== EFFETTO DI OGNI VARIABILE (mediana del R netto per trade su tutte le altre combinazioni) ===
+
+-- TF --
+      varianti   R_IS  R_OOS  pos_entrambi
+TF                                        
+120      47250 -0.028 -0.013        21.848
+240      36060  0.050  0.093        41.547
+1440      2510 -0.303  0.344         7.649
+
+-- N --
+     varianti   R_IS  R_OOS  pos_entrambi
+N                                        
+10      29280 -0.026  0.042        27.575
+20      20555 -0.001  0.023        28.217
+50      17895  0.030  0.038        32.853
+100     18090  0.008  0.049        31.752
+
+-- quiet --
+       varianti   R_IS  R_OOS  pos_entrambi
+quiet                                      
+no        76190  0.005  0.041        30.424
+si         9630 -0.043  0.018        24.060
+
+-- KR --
+      varianti   R_IS  R_OOS  pos_entrambi
+KR                                        
+1.25     27585 -0.029  0.017        24.829
+1.50     25105 -0.012  0.049        28.556
+2.00     18015  0.048  0.065        37.141
+2.50     10740  0.033  0.051        33.538
+3.00      4375  0.040 -0.015        27.109
+
+-- KV --
+     varianti   R_IS  R_OOS  pos_entrambi
+KV                                       
+0.0     30225 -0.009  0.061        31.795
+1.0     29360 -0.011  0.062        31.155
+1.5     21520  0.007  0.004        27.040
+2.0      4715  0.117 -0.114        19.533
+
+-- BODY --
+      varianti   R_IS  R_OOS  pos_entrambi
+BODY                                      
+0.5      34670 -0.014  0.041        26.285
+0.6      29250  0.010  0.018        29.224
+0.7      21900  0.012  0.065        35.781
+
+-- legmax --
+        varianti   R_IS  R_OOS  pos_entrambi
+legmax                                      
+1          30140 -0.031 -0.016        19.350
+4          55680  0.013  0.066        35.318
+
+-- pmin --
+      varianti   R_IS  R_OOS  pos_entrambi
+pmin                                      
+1        55380 -0.012  0.008        24.946
+2        30440  0.023  0.095        38.377
+
+-- pmax --
+      varianti   R_IS  R_OOS  pos_entrambi
+pmax                                      
+4        35330  0.027  0.037        34.461
+8        50490 -0.017  0.040        26.385
+
+-- retr --
+       varianti   R_IS  R_OOS  pos_entrambi
+retr                                       
+0.382     17605  0.000  0.034        30.917
+0.500     30950  0.011  0.032        29.561
+0.618     37265 -0.010  0.046        29.263
+
+-- sess --
+       varianti   R_IS  R_OOS  pos_entrambi
+sess                                       
+BUY       24230  0.071  0.085        43.512
+SELL      17505 -0.118 -0.060        11.591
+TUTTE     44085  0.008  0.046        29.318
+
+-- exit --
+        varianti   R_IS  R_OOS  pos_entrambi
+exit                                        
+TIME12     17164 -0.015  0.085        31.514
+TIME24     17164 -0.046  0.067        22.081
+TIME6      17164 -0.005  0.037        27.657
+TP2R       17164  0.041  0.004        36.046
+TP3R       17164  0.011  0.024        31.251
+
+=== TOP 25 PER t IN-SAMPLE (2017-22) E LORO ESITO 2023-26 ===
+ TF  N quiet   KR  KV  BODY  legmax  pmin  pmax  retr  sess exit  n_IS  m_IS  t_IS  n_OOS  m_OOS  t_OOS
+240 50    no 2.00 1.5   0.6       4     2     4 0.382 TUTTE TP2R  47.0 0.732 3.447   35.0  0.266  1.058
+240 10    no 2.00 1.5   0.7       4     2     4 0.382 TUTTE TP2R  43.0 0.757 3.425   29.0  0.427  1.531
+240 50    no 2.00 1.5   0.7       4     1     4 0.382 TUTTE TP2R  48.0 0.685 3.256   40.0  0.327  1.383
+240 50    no 2.50 1.5   0.7       4     1     4 0.382 TUTTE TP2R  42.0 0.722 3.227   27.0  0.198  0.700
+240 20    no 2.00 1.5   0.6       4     2     4 0.382 TUTTE TP2R  47.0 0.670 3.129   36.0  0.230  0.933
+240 50    no 2.00 1.5   0.7       4     2     4 0.618 TUTTE TP2R  51.0 0.635 3.115   37.0  0.331  1.375
+240 20    no 2.50 1.5   0.6       4     2     4 0.382 TUTTE TP2R  43.0 0.691 3.103   30.0  0.078  0.297
+240 50    no 2.00 0.0   0.7       4     2     4 0.382 TUTTE TP2R  45.0 0.677 3.103   31.0  0.431  1.599
+240 50    no 2.00 1.0   0.7       4     2     4 0.382 TUTTE TP2R  45.0 0.677 3.103   31.0  0.431  1.599
+120 10    no 1.50 2.0   0.5       4     1     4 0.500   BUY TP2R  44.0 0.681 3.084   48.0 -0.116 -0.576
+120 10    no 1.25 2.0   0.5       4     1     4 0.500   BUY TP2R  44.0 0.681 3.084   51.0 -0.112 -0.575
+240 10    no 2.00 1.5   0.6       4     2     4 0.382 TUTTE TP2R  54.0 0.616 3.070   37.0  0.197  0.812
+240 20    no 2.50 1.5   0.7       4     2     4 0.618 TUTTE TP2R  45.0 0.661 3.058   30.0  0.253  0.965
+240 50    no 2.00 1.0   0.7       4     2     4 0.618 TUTTE TP2R  65.0 0.556 3.046   41.0  0.199  0.882
+240 50    no 2.50 1.5   0.7       4     1     4 0.500 TUTTE TP2R  56.0 0.589 3.021   32.0  0.131  0.514
+240 10    no 1.50 1.5   0.7       4     2     4 0.382 TUTTE TP2R  50.0 0.626 3.000   31.0  0.431  1.596
+240 50    no 2.00 1.5   0.5       4     2     4 0.382 TUTTE TP2R  57.0 0.582 2.974   41.0  0.225  0.975
+120 50    no 1.50 2.0   0.5       4     1     4 0.618   BUY TP2R  44.0 0.646 2.952   40.0  0.152  0.653
+120 50    no 1.25 2.0   0.5       4     1     4 0.618   BUY TP2R  44.0 0.646 2.952   43.0  0.138  0.617
+120 50    no 2.00 2.0   0.5       4     1     4 0.618   BUY TP2R  42.0 0.656 2.944   36.0  0.118  0.482
+240 50    no 2.00 0.0   0.7       4     2     4 0.618 TUTTE TP2R  66.0 0.532 2.936   41.0  0.199  0.882
+240 50    no 2.00 0.0   0.7       4     1     4 0.618 TUTTE TP2R  98.0 0.437 2.931   62.0  0.151  0.814
+240 50    no 2.00 1.5   0.7       4     2     4 0.500 TUTTE TP2R  48.0 0.615 2.924   34.0  0.368  1.471
+240 50    no 2.50 1.5   0.7       4     1     4 0.618 TUTTE TP2R  59.0 0.557 2.920   34.0  0.239  0.952
+240 20    no 1.50 1.5   0.7       4     2     4 0.382 TUTTE TP2R  44.0 0.645 2.911   34.0  0.215  0.850
+
+=== WALK-FORWARD DEL PROCESSO DI SCELTA (scelgo sui 3 anni precedenti, opero l'anno dopo alla cieca) ===
+ anno  top  trade  R_medio  R_tot
+ 2020    1     16   -0.285  -4.57
+ 2020   10    139    0.148   2.05
+ 2020   50    756    0.275   4.16
+ 2021    1     19    0.189   3.59
+ 2021   10    168   -0.108  -1.81
+ 2021   50    901   -0.006  -0.11
+ 2022    1      4   -0.295  -1.18
+ 2022   10     53   -0.429  -2.27
+ 2022   50    728   -0.322  -4.69
+ 2023    1      6   -0.044  -0.26
+ 2023   10    136   -0.226  -3.08
+ 2023   50    750   -0.176  -2.64
+ 2024    1      9   -0.383  -3.45
+ 2024   10    105   -0.269  -2.82
+ 2024   50    423   -0.247  -2.09
+ 2025    1      6    0.931   5.59
+ 2025   10     41    0.534   2.19
+ 2025   50    336   -0.028  -0.19
+ 2026    1     26    0.101   2.63
+ 2026   10    127    0.355   4.51
+ 2026   50    547    0.115   1.26
+     anni_positivi  anni  R_medio_pesato
+top                                     
+1              3.0   7.0           0.027
+10             3.0   7.0          -0.016
+50             2.0   7.0          -0.048
+
+VERIFICA TRADINGVIEW del gruppo migliore (H4, N50, impulso>=2x, volume>=1.5x, corpo 0.6, pausa 2-4, ritracciamento max 38.2%, TP 2R, max 24 candele; swap NON incluso in TradingView):
+OANDA:XAUUSD H4 2017-2026: 88 trade, 36.4% vincenti, profit factor 1.07, +4.2% in 10 anni, drawdown max 10.9%
+PEPPERSTONE:XAUUSD H4 2017-2026: 59 trade, 40.7% vincenti, profit factor 1.26, +9.8% in 10 anni, drawdown max 7.7%
