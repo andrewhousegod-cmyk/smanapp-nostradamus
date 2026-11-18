@@ -1,0 +1,87 @@
+//@version=6
+strategy("Impulso-Pausa-Continuazione NY XAUUSD", overlay=true, initial_capital=1160, currency=currency.USD, commission_type=strategy.commission.cash_per_contract, commission_value=0.177, slippage=0, pyramiding=0, margin_long=1, margin_short=1)
+kr      = input.float(1.5, "Impulso: range >= X media")
+kv      = input.float(1.0, "Impulso: volume >= X media")
+bodyMin = input.float(0.60, "Corpo minimo")
+pmax    = input.int(8, "Pausa max candele")
+legmax  = input.int(4, "Candele forti max nella gamba")
+exitMode = input.string("TEMPO", "Uscita", options=["TEMPO", "TP3R"])
+holdBars = input.int(12, "Uscita a tempo (candele)")
+h0 = input.int(12, "Ora UTC inizio")
+h1 = input.int(17, "Ora UTC fine")
+riskPct = input.float(1.0, "Rischio %")
+buf = 0.05
+rng  = high - low
+avgR = ta.sma(rng, 20)[1]
+avgV = ta.sma(volume, 20)[1]
+quiet = ta.highest(rng, 20)[1] < 2 * avgR
+body = math.abs(close - open)
+impulse = not na(avgR) and rng >= kr * avgR and volume >= kv * avgV and body >= bodyMin * rng and quiet and close != open
+hC = hour(time_close, "UTC")
+inWindow = hC >= h0 and hC < h1
+minsUTC = hour(time, "UTC") * 60 + minute(time, "UTC")
+var int   state = 0
+var int   dir = 0
+var float hi = na
+var float lo = na
+var float box = na
+var int   c = 0
+var int   legn = 0
+flat = strategy.position_size == 0
+if flat and state == 2
+    rg = hi - lo
+    inv = dir == 1 ? lo + 0.5 * rg : hi - 0.5 * rg
+    if (dir == 1 and low <= inv) or (dir == -1 and high >= inv) or c >= pmax or not inWindow
+        strategy.cancel("E")
+        state := 0
+    else
+        box := dir == 1 ? math.min(box, low) : math.max(box, high)
+        c += 1
+else if flat and state == 1
+    rg = hi - lo
+    lvl = dir == 1 ? hi : lo
+    inv = dir == 1 ? lo + 0.5 * rg : hi - 0.5 * rg
+    if (dir == 1 and low <= inv) or (dir == -1 and high >= inv)
+        state := 0
+    else if (dir == 1 and close > lvl) or (dir == -1 and close < lvl)
+        if legn < legmax
+            hi := math.max(hi, high)
+            lo := math.min(lo, low)
+            legn += 1
+        else
+            state := 0
+    else
+        if dir == 1
+            hi := math.max(hi, high)
+            box := low
+        else
+            lo := math.min(lo, low)
+            box := high
+        c := 1
+        state := 2
+else if flat and state == 0 and impulse
+    state := 1
+    dir := close > open ? 1 : -1
+    hi := high
+    lo := low
+    c := 0
+    legn := 1
+    box := na
+if not flat
+    state := 0
+if flat and state == 2 and inWindow
+    E  = dir == 1 ? hi + buf : lo - buf
+    SL = dir == 1 ? box - buf : box + buf
+    d  = math.abs(E - SL)
+    qty = math.max(1, math.floor(strategy.equity * riskPct / 100 / d))
+    if dir == 1
+        strategy.entry("E", strategy.long, qty = qty, stop = E)
+    else
+        strategy.entry("E", strategy.short, qty = qty, stop = E)
+    if exitMode == "TP3R"
+        strategy.exit("X", "E", stop = SL, limit = dir == 1 ? E + 3 * d : E - 3 * d)
+    else
+        strategy.exit("X", "E", stop = SL)
+if not flat
+    if bar_index - strategy.opentrades.entry_bar_index(0) >= holdBars or minsUTC >= 1245
+        strategy.close_all(comment = "tempo")

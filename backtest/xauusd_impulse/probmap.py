@@ -62,7 +62,7 @@ def build(src="exness"):
                 k = int(r.i1)
                 if k >= len(O) or mod[k] >= 1200 or wd[k] >= 5 or eod[k] <= k or r.d == 0: continue
                 kend = min(eod[k], b.i1.values[min(len(b) - 1, b.index.get_loc(idx) + 12)])
-                res = cells(k + 1, kend, int(r.d), O[k], r.A, H, L, C, SLs, TPs)
+                res = cells(k, kend, int(r.d), O[k], r.A, H, L, C, SLs, TPs)
                 R.append(res.ravel())
                 al = r.ema * r.d
                 recs.append((tf, r.kind, k, yr[k], mod[k] // 60, wd[k], r.exp, r.comp, r.vr, bool(r.quiet), bool(r.brk), al,

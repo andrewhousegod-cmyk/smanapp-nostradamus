@@ -14,7 +14,11 @@ Dati: MT5 Exness XAUUSD M1, aprile 2017 → agosto 2026 (3,28 milioni di barre) 
 Costi: spread 0,20 $ (come BCM negli screenshot) + slippage 0,05 $ per lato + commissione 5,40 $/lotto.
 1 pip = 0,10 $. Tutte le operazioni chiuse entro le 20:45 UTC.
 
-# 0. STRATEGIA PRINCIPALE v1: "Contro l'esaurimento" su M3 (scalping)
+# 0. [RITIRATA] "Contro l'esaurimento" su M3
+
+> **⚠️ DOCUMENTO RITIRATO (18/11/2026).** La strategia «Contro l'esaurimento» descritta qui **NON è profittevole**. I numeri del manuale (67–76% di trade vincenti) erano gonfiati da un errore di simulazione: nelle candele M1 in cui venivano toccati sia lo stop sia il target, il risultato veniva contato a favore del trade contrario. Con la simulazione corretta sui tick al secondo il risultato è 52–55% di trade vincenti e netto ≤ 0. TradingView (OANDA, 2024–2026) dà 55,5% e −34% del capitale. **Non usare questa strategia né l'Expert Advisor `ContraEsaurimento_XAUUSD.mq5`.** La strategia confermata è «Impulso–Pausa–Continuazione, M30, sessione New York»: vedi `tradingview/`.
+
+
 
 **Il pattern.** Sui timeframe piccoli, la candela "forte" (molto più grande delle precedenti, con l'RSI già tirato nella sua direzione) **di solito non è l'inizio del movimento ma la sua fine**: nei minuti successivi il prezzo ritraccia almeno mezzo ATR molto più spesso del caso. È l'opposto dell'intuizione "entro sull'impulso". I dati (2017–2026 + campione mai usato) lo confermano in tutti i periodi.
 

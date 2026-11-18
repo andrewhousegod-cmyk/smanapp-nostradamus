@@ -1,3 +1,4 @@
+// !!! RITIRATO 18/11/2026: strategia NON profittevole (errore di simulazione). NON USARE. !!!
 //+------------------------------------------------------------------+
 //| ContraEsaurimento_XAUUSD.mq5                                     |
 //| Strategia "Contro l'esaurimento" su XAUUSD M3 (v1)               |
