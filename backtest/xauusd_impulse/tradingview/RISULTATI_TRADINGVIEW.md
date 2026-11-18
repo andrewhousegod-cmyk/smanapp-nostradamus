@@ -20,3 +20,20 @@ Python (Exness, M30): 227 trade, 41% vincenti, rapporto vincita/perdita 2,2 → 
 | Feed | TF | Periodo | Trade | Vincenti | Profit factor | Netto |
 |---|---|---|---|---|---|---|
 | OANDA | M3 | 2024–nov 2026 | 335 | 55,5% | 0,74 | −34% |
+
+## Stesse regole su altri mercati (M30, 12–17 UTC, costi in % del prezzo, capitale 100k per sizing preciso)
+
+| Mercato | Trade | Vincenti | Profit factor | Netto | Drawdown max |
+|---|---|---|---|---|---|
+| Argento OANDA:XAGUSD | 201 | 37,8% | 1,27 | +40% | 15,4% |
+| Nasdaq PEPPERSTONE:NAS100 | 241 | 29,5% | 1,24 | +56% | 23,8% |
+| S&P500 PEPPERSTONE:US500 | 220 | 32,3% | 1,28 | +51% | 21,4% |
+| DAX PEPPERSTONE:GER40 | 116 | 37,1% | 0,91 | −7% | 22,2% |
+
+## Stesse regole sull'oro in altre sessioni (OANDA M30)
+
+| Sessione (UTC) | Trade | Vincenti | Profit factor | Netto | Drawdown max |
+|---|---|---|---|---|---|
+| Asia 00–06 | 81 | 32,1% | 1,02 | +1,5% | 12,6% |
+| Londra 06–12 | 276 | 17,8% | 0,72 | −53% | 57% |
+| New York 12–17 | 233 | 41,2% | 1,48 | +81% | 12,8% |
