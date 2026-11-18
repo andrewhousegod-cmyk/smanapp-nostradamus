@@ -14,6 +14,53 @@ Dati: MT5 Exness XAUUSD M1, aprile 2017 → agosto 2026 (3,28 milioni di barre) 
 Costi: spread 0,20 $ (come BCM negli screenshot) + slippage 0,05 $ per lato + commissione 5,40 $/lotto.
 1 pip = 0,10 $. Tutte le operazioni chiuse entro le 20:45 UTC.
 
+# 0. STRATEGIA PRINCIPALE v1: "Contro l'esaurimento" su M3 (scalping)
+
+**Il pattern.** Sui timeframe piccoli, la candela "forte" (molto più grande delle precedenti, con l'RSI già tirato nella sua direzione) **di solito non è l'inizio del movimento ma la sua fine**: nei minuti successivi il prezzo ritraccia almeno mezzo ATR molto più spesso del caso. È l'opposto dell'intuizione "entro sull'impulso". I dati (2017–2026 + campione mai usato) lo confermano in tutti i periodi.
+
+**Layout del grafico (MT5)**
+
+- XAUUSD, **M3**.
+- **RSI(14)** sulla chiusura, livelli 25 e 75.
+- **ATR(20)** (approssima il range medio delle ultime 20 candele).
+- Volumi tick (informativi, non obbligatori).
+
+**Segnale (tutte le condizioni a chiusura candela)**
+
+| # | Condizione SELL (contro una candela rialzista) | Condizione BUY (specchio) |
+|---|---|---|
+| 1 | Candela rialzista con **range ≥ 3 × la media delle 20 candele precedenti** | Candela ribassista con range ≥ 3 × la media |
+| 2 | **Corpo ≥ 60%** del range | idem |
+| 3 | **RSI(14) ≥ 75** alla chiusura della candela | RSI(14) ≤ 25 |
+| 4 | **ATR(20) M3 ≥ 1,5 $** (versione prudente: ≥ 2,5 $) | idem |
+| 5 | Ingresso tra 00:00 e 20:00 UTC, mai di venerdì NFP 12–15 UTC | idem |
+
+**Esecuzione e gestione**
+
+- **Ingresso:** all'apertura della candela successiva, **contro** la candela segnale.
+- **Stop loss = take profit = 0,5 × ATR(20)** (oggi circa 0,75–1,25 $, cioè 7–12 pip).
+- **Uscita a tempo:** se dopo 12 candele (36 minuti) non ha toccato né TP né SL, chiusura a mercato. Chiusura forzata alle 20:45 UTC.
+- **Niente break even, niente parziali:** con stop e target così vicini non servono e aggiungono costi.
+- **Rischio:** 1% per trade (vedi le perdite consecutive sotto).
+
+**Numeri (netti: spread 0,20 $ + slippage + commissione)**
+
+| Campione | Trade | Vincenti | Vincenti con ingresso casuale | R medio netto |
+|---|---|---|---|---|
+| ATR ≥ 1,5 $, 2017–2022 | 128 | 67% | 52% | 0,00 |
+| ATR ≥ 1,5 $, 2023–ago 2026 | 341 | 68% | 52% | +0,11 |
+| ATR ≥ 1,5 $, **ago–nov 2026 (mai usato)** | 42 | **76%** | 46% | **+0,31** |
+| ATR ≥ 2,5 $, 2017–ago 2026 | 236 | circa 70% | circa 50% | **+0,19** |
+| ATR ≥ 2,5 $, ago–nov 2026 (mai usato) | 37 | 73% | 46% | +0,27 |
+
+- Frequenza attuale (oro intorno a 4000 $, ATR alto): **circa 13–15 segnali al mese su M3**.
+- Massimo storico di perdite consecutive: 5. Drawdown massimo con l'1% di rischio: 19%.
+- Anni negativi: 2021–2023 (ATR basso → i costi pesano di più). **Il vantaggio lordo è stabile; quello netto c'è solo quando l'oro è volatile in dollari, come oggi.** Per questo il filtro ATR è obbligatorio.
+
+**Stato: [DIMOSTRATO al lordo in 3 campioni] / [PLAUSIBILE al netto].** Da confermare in demo, soprattutto lo slippage reale sull'ingresso subito dopo un picco.
+
+**Varianti testate e scartate:** lo stesso fade su M5 (netto circa 0 sullo storico) e su M15–M30 (nessun vantaggio). Il "fade largo" (espansione > 3× **o** RSI > 75 **o** volume > 3×) ha 4 segnali al giorno ma un netto di circa 0.
+
 # 1. Struttura del piano
 
 ## 1.1 Money management
