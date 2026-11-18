@@ -1,0 +1,125 @@
+Eventi con esito deciso: 1865 (2017-22: 738, 2023-26: 1127); continua 52.2%
+
+=== 1) OGNI CARATTERISTICA DA SOLA: % che CONTINUA per quintile, 2017-22 | 2023-26 (coerente = stesso lato del 50% in entrambi e scarto >=5 punti) ===
+caratteristica  livello  n_17_22  cont_17_22  n_23_26  cont_23_26 coerente
+         ratio Q1 basso      115        49.6      258        55.0         
+         ratio       Q2      135        51.9      238        49.2         
+         ratio       Q3      141        49.6      232        53.4         
+         ratio       Q4      161        51.6      212        53.8         
+         ratio  Q5 alto      186        53.2      187        52.4         
+        vratio Q1 basso      194        57.2      179        44.7         
+        vratio       Q2      163        44.8      210        55.2         
+        vratio       Q3      150        49.3      223        56.5         
+        vratio       Q4      120        53.3      253        52.2         
+        vratio  Q5 alto      111        51.4      262        53.8         
+         bodyf Q1 basso      147        49.7      226        55.3         
+         bodyf       Q2      151        47.7      222        46.8         
+         bodyf       Q3      144        50.0      229        57.2         
+         bodyf       Q4      146        55.5      227        52.0         
+         bodyf  Q5 alto      150        54.0      223        52.5         
+     close_loc Q1 basso      141        49.6      232        49.6         
+     close_loc       Q2      140        48.6      233        52.8         
+     close_loc       Q3      164        50.6      209        56.0         
+     close_loc       Q4      142        58.5      231        50.2         
+     close_loc  Q5 alto      151        49.7      222        55.9         
+  wick_against Q1 basso      151        49.7      222        55.9         
+  wick_against       Q2      142        58.5      231        50.2         
+  wick_against       Q3      164        50.6      209        56.0         
+  wick_against       Q4      140        48.6      233        52.8         
+  wick_against  Q5 alto      141        49.6      232        49.6         
+          comp Q1 basso      178        51.7      195        52.3         
+          comp       Q2      118        53.4      255        51.0         
+          comp       Q3      150        52.7      223        49.3         
+          comp       Q4      135        45.9      238        53.4         
+          comp  Q5 alto      157        52.9      216        58.3         
+         box_w Q1 basso      148        54.1      225        45.8         
+         box_w       Q2      150        56.0      223        55.2       SI
+         box_w       Q3      134        47.0      239        56.5         
+         box_w       Q4      151        55.0      222        57.7         
+         box_w  Q5 alto      155        44.5      218        48.6         
+      brk_dist Q1 basso      145        51.0      228        57.9         
+      brk_dist       Q2      139        53.2      234        44.4         
+      brk_dist       Q3      170        52.9      203        56.2         
+      brk_dist       Q4      142        43.0      231        49.4         
+      brk_dist  Q5 alto      142        56.3      231        56.7       SI
+      dist_ema Q1 basso      117        55.6      256        52.3         
+      dist_ema       Q2      154        49.4      219        58.4         
+      dist_ema       Q3      164        56.7      209        46.9         
+      dist_ema       Q4      154        50.0      219        54.8         
+      dist_ema  Q5 alto      149        45.6      224        51.3         
+     pre_drift Q1 basso      150        48.7      223        52.9         
+     pre_drift       Q2      154        54.5      219        53.0         
+     pre_drift       Q3      152        52.0      221        51.6         
+     pre_drift       Q4      145        55.9      228        51.3         
+     pre_drift  Q5 alto      137        45.3      236        55.1         
+       rsi_dir Q1 basso      142        52.1      231        53.2         
+       rsi_dir       Q2      152        53.9      221        56.6         
+       rsi_dir       Q3      157        49.7      216        50.0         
+       rsi_dir       Q4      161        54.0      212        51.4         
+       rsi_dir  Q5 alto      126        46.0      247        52.6         
+    round_dist Q1 basso       81        51.9      292        57.9         
+    round_dist       Q2       88        58.0      285        53.0         
+    round_dist       Q3      139        56.8      234        47.9         
+    round_dist       Q4      185        46.5      188        52.7         
+    round_dist  Q5 alto      245        49.4      128        50.0         
+      day_move Q1 basso      150        54.0      223        54.7         
+      day_move       Q2      138        52.2      235        56.6         
+      day_move       Q3      152        49.3      221        51.1         
+      day_move       Q4      162        42.6      211        49.8         
+      day_move  Q5 alto      136        60.3      237        51.5         
+          hour Q1 basso      154        44.8      219        54.8         
+          hour       Q2      155        58.1      218        56.0       SI
+          hour       Q3      176        44.3      197        49.2         
+          hour       Q4      119        53.8      254        49.2         
+          hour  Q5 alto      134        58.2      239        54.8         
+           brk        0      211        53.1      344        52.6         
+           brk        1      527        50.7      783        52.9         
+     ema200_al        0      175        53.1      328        55.8         
+     ema200_al        1      563        50.8      799        51.6         
+      ema50_al        0       73        47.9      131        55.7         
+      ema50_al        1      665        51.7      996        52.4         
+     d1_mom_al        0      385        51.2      612        52.0         
+     d1_mom_al        1      353        51.6      515        53.8         
+        pd_brk        0      465        52.5      746        53.6         
+        pd_brk        1      273        49.5      381        51.2         
+       news_in        0      664        51.7     1024        52.9         
+       news_in        1       74        48.6      103        51.5         
+      news_day        0      326        52.8      555        57.3         
+      news_day        1      412        50.2      572        48.4         
+            tf        5      428        51.6      591        55.2         
+            tf       15      159        46.5      321        48.6         
+            tf       30      110        56.4      156        50.6         
+            tf       60       41        53.7       59        57.6         
+           dow        0      130        53.8      180        52.8         
+           dow        1      156        54.5      235        53.6         
+           dow        2      168        49.4      240        52.1         
+           dow        3      153        47.7      233        55.8         
+           dow        4      130        52.3      239        49.8         
+
+Livelli coerenti: 3 su 93
+
+=== 2) MODELLO: imparo sul 2017-22, provo sul 2023-26 (AUC 0,50 = moneta; 0,55+ = qualcosa; 0,60+ = utile) ===
+
+Regressione logistica: AUC 2017-22 (dove ha imparato) = 0.590   AUC 2023-26 (nuovi) = 0.495
+  2023-26, % che continua per gruppo di previsione:
+                          size  mean
+q                                   
+20% piu' 'inversione'      226  52.7
+Q2                         225  56.9
+Q3                         225  50.2
+Q4                         225  48.9
+20% piu' 'continuazione'   226  55.3
+
+Gradient boosting (alberi): AUC 2017-22 (dove ha imparato) = 0.914   AUC 2023-26 (nuovi) = 0.499
+  2023-26, % che continua per gruppo di previsione:
+                          size  mean
+q                                   
+20% piu' 'inversione'      226  52.7
+Q2                         225  56.0
+Q3                         225  51.6
+Q4                         225  50.2
+20% piu' 'continuazione'   226  53.5
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-user-smanapp-nostradamus/a55a03eb-569c-5700-9009-6802a5d23bb1/scratchpad/work/whydir.py", line 108, in <module>
+    EOF
+NameError: name 'EOF' is not defined
